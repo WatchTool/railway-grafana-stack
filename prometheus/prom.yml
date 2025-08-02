@@ -11,6 +11,16 @@ scrape_configs:
     static_configs:
       - targets: ["connection-manager.railway.internal:6767"]
 
+  - job_name: "processor"
+    scheme: http
+    static_configs:
+      - targets: ["data-processor.railway.internal:9090"]
+
+  - job_name: "server"
+    scheme: http
+    static_configs:
+      - targets: ["api-http-ws.railway.internal:8081"]
+
   #  ? TODO: add your services here
   # - job_name: 'your-job-name'
   #   scheme: https
