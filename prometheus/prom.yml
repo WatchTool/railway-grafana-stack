@@ -9,7 +9,7 @@ scrape_configs:
   - job_name: "connection-manager"
     scheme: http
     static_configs:
-      - targets: ["connection-manager.railway.internal:6767"]
+      - targets: ["connection-manager-go.railway.internal:9091"]
 
   - job_name: "processor"
     scheme: http
